@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div @click="makeRedirection">
+      <p>Just click me for more details</p>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+  },
+  methods: {
+    makeRedirection() {
+      this.$router.push({name:'detail'})
+    }
   }
 }
 </script>
+
+<style scoped>
+  .home div {
+    border: 1px solid #47a9cf;
+    width: 30%;
+    margin: 50px auto;
+    padding: 10px;
+  }
+  .home div:hover {
+    background: #47a9cf;
+    color: #ffffff;
+    border: #47a9cf;
+  }
+</style>
