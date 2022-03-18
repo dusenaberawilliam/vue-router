@@ -21,8 +21,8 @@ const routes = [
     component: Contact
   },
   {
-    path:'/detail',
-    name:'detail',
+    path: '/detail',
+    name: 'detail',
     component: Detail
   }
 ]
